@@ -1,18 +1,22 @@
 import Hero from "@/components/Hero"
 import Benefits from "@/components/Benefits"
+import CoverageCTA from "@/components/CoverageCTA"
 import LeadForm from "@/components/LeadForm"
 
 export default function Home() {
   return (
-    <main>
-      {/* Badge demo */}
-      <div className="text-center text-xs py-2 bg-yellow-300">
-        DEMO - Powered by Emporium Factory
-      </div>
+    <main className="flex flex-col gap-20 pb-20">
 
       <Hero />
+
       <Benefits />
-      <LeadForm />
+
+      <section className="max-w-5xl mx-auto px-6">
+        <LeadForm />
+      </section>
+
+      <CoverageCTA />
+
     </main>
   )
 }
