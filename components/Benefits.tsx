@@ -1,25 +1,22 @@
-import { config } from "@/lib/config"
+import Hero from "@/components/Hero"
+import Benefits from "@/components/Benefits"
+import CoverageCTA from "@/components/CoverageCTA"
+import LeadForm from "@/components/LeadForm"
 
-export default function Benefits() {
+export default function Home() {
   return (
-    <section className="py-20 px-6 bg-gray-50">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-10">
-          ¿Por qué elegir nuestro sistema?
-        </h2>
+    <main className="flex flex-col gap-20 pb-20">
 
-        <div className="space-y-6 text-lg">
-          {config.benefits.map((item, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-center gap-3"
-            >
-              <span className="text-green-600 text-2xl">✓</span>
-              <span>{item}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      <Hero />
+
+      <Benefits />
+
+      <section className="max-w-5xl mx-auto px-6">
+        <LeadForm />
+      </section>
+
+      <CoverageCTA />
+
+    </main>
   )
 }
